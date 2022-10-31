@@ -1,0 +1,10 @@
+function validatePIN (pin) {
+var reg = /^\d{4,6}\b/g
+if(pin.length == 4 || pin.length == 6){
+    return reg.test(pin)
+}
+return false
+}
+console.log(validatePIN("1234"))// === true
+console.log(validatePIN("12345"))// === false
+console.log(validatePIN("123456"))// === true
