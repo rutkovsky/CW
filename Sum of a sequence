@@ -1,0 +1,8 @@
+function sequenceSum(begin, end, step) {
+  if(begin>end) { return 0 }
+  var total = begin;
+  for (; (begin + step) <= end ; begin = begin + step) {
+    total = total + (begin + step);
+  }
+  return total;
+}
