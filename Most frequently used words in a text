@@ -1,0 +1,12 @@
+function topThreeWords(text) {
+	// number of records
+    let cache = {};
+    let arr = text.toLowerCase().replace(/[^a-zA-z\s']/g, '').split(' ').filter(item => item && item !== "'");
+    // Statistical occurrence
+    arr.forEach(item => {
+        cache[item] = (cache[item] || 0) + 1;
+    });
+    // Remorse and order
+    arr = Array.from(new Set(arr)).sort((e1, e2) => cache[e2] - cache[e1]);
+    return arr.splice(0, 3);
+}
