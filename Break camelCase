@@ -1,0 +1,13 @@
+function solution(String){
+  var newString = '';
+  for (letter of String){
+    if (letter == letter.toUpperCase()){
+      newString += ' ';
+      newString += letter;
+    } else{
+      newString += letter;
+    }
+  }
+  return newString
+}
+console.log(solution("myClassTable"))
