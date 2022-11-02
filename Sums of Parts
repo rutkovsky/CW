@@ -1,0 +1,7 @@
+function partsSums(ls) {
+  let result = [0]
+  for(const n in ls.reverse()){
+    result.push(ls[n]+result[n]);
+  }
+  return result.reverse()
+}
