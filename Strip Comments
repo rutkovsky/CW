@@ -1,0 +1,9 @@
+function solution(input, markers) {
+  markers.forEach(function(element){
+    let reg = new RegExp('\\' + element + '.+','g')
+    input = input.replace(reg, '')
+  })
+  return input.split('\n').map(el => el.trim()).join('\n')
+};
+
+console.log(solution("Q @b\nu\ne -e f g", ["@", "-"]));
